@@ -9,3 +9,7 @@ spring:
   h2:
     console:
       enabled: true
+  datasource:
+    username: sa
+    password: password
+    url: jdbc:h2:file:./demo
