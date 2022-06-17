@@ -17,12 +17,15 @@
 package org.camunda.bpm.getstarted.loanapproval;
 
 import org.camunda.bpm.engine.RuntimeService;
+import org.camunda.bpm.engine.runtime.ProcessInstance;
 import org.camunda.bpm.spring.boot.starter.annotation.EnableProcessApplication;
 import org.camunda.bpm.spring.boot.starter.event.PostDeployEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.event.EventListener;
+
+import java.util.Map;
 
 @SpringBootApplication
 @EnableProcessApplication
@@ -37,7 +40,6 @@ public class WebappExampleProcessApplication {
 
   @EventListener
   private void processPostDeploy(PostDeployEvent event) {
-    runtimeService.startProcessInstanceByKey("loanApproval");
+    ProcessInstance processInstance = runtimeService.startProcessInstanceByKey("loanApproval",Map.of("user_name","shaoliang"));
   }
-
 }

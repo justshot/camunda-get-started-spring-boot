@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0dihs9l" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.0.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <decision id="Decision_1bbyrh9" name="Decision 1">
+    <decisionTable id="DecisionTable_08jir3u">
+      <input id="Input_1" camunda:inputVariable="user_name">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>user_name</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" name="role" typeRef="string" />
+      <rule id="DecisionRule_1ysj6ib">
+        <inputEntry id="UnaryTests_1pwk8xe">
+          <text>"shaoliang"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01m265w">
+          <text>"admin"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_06826ig">
+        <inputEntry id="UnaryTests_0cr38by">
+          <text>"peter"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1crfbmt">
+          <text>"normal"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1bbyrh9">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
