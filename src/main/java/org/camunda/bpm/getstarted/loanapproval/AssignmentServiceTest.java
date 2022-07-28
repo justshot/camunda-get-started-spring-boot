@@ -7,5 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class AssignmentServiceTest {
      @Test
      void getCandidateGroups() {
+          assertTrue(true);
      }
 }
